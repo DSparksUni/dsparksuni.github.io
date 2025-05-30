@@ -6,13 +6,14 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
-
+    --skin-color: #ec1839;
 }
 
 body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -384,4 +385,16 @@ h3.my-school {
 .portfolio .portfolio-heading h2 {
     color: var(--text-black-900);
     font-weight: 500;
+}
+.portfolio .portfolio-item {
+    margin-left: 2rem;
+}
+
+/* Markdown */
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
 }
