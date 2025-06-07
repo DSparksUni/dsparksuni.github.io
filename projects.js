@@ -1,7 +1,8 @@
 const projects = [
     {
         id: "project-rust_gol",
-        root: "https://raw.githubusercontent.com/DSparksUni/RustLife/refs/heads/master"
+        root: "https://raw.githubusercontent.com/DSparksUni/RustLife/refs/heads/master",
+        url: "https://github.com/DSparksUni/RustLife",
     },
 ];
 
