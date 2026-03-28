@@ -1,3 +1,5 @@
+import markdownit from 'https://cdn.jsdelivr.net/npm/markdown-it@14.1.1/+esm'
+
 const projects = [
     {
         id: "project-rust_gol",
