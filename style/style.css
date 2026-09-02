@@ -24,7 +24,8 @@ body {
     box-sizing: border-box;
 }
 
-::before,::after {
+::before,
+::after {
     box-sizing: border-box;
 
 }
@@ -36,36 +37,44 @@ body {
     padding: 0 30px;
     opacity: 1;
 }
+
 .hidden {
     display: none !important;
 }
+
 .main-content {
     padding-left: 270px;
 }
+
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .container {
     max-width: 1100px;
     width: 100%;
     margin: auto;
 }
+
 .section .container {
     padding-top: 60px;
     padding-bottom: 70px;
 }
+
 .section-title {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 60px;
 }
+
 .section-title h2 {
     font-size: 40px;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
 }
+
 .section-title h2::before {
     content: '';
     height: 4px;
@@ -75,6 +84,7 @@ body {
     top: 100%;
     left: 0;
 }
+
 .section-title h2::after {
     content: '';
     height: 4px;
@@ -85,6 +95,7 @@ body {
     left: 0;
     margin-top: 8px;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +103,7 @@ body {
     margin-right: -15px;
     position: relative;
 }
+
 .btn {
     font-size: 16px;
     font-weight: 500;
@@ -104,6 +116,7 @@ body {
     background: var(--skin-color);
     transition: all 0.3s ease;
 }
+
 .btn:hover {
     transform: scale(1.05);
 }
@@ -123,12 +136,14 @@ body {
     align-items: center;
     z-index: 10;
 }
+
 .aside .logo {
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
 }
+
 .aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
@@ -137,10 +152,12 @@ body {
     letter-spacing: 5px;
     position: relative;
 }
+
 .aside .logo a span {
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
 }
+
 .aside .logo a::before {
     content: '';
     position: absolute;
@@ -151,6 +168,7 @@ body {
     bottom: 0;
     left: 0;
 }
+
 .aside .logo a::after {
     content: '';
     position: absolute;
@@ -161,6 +179,7 @@ body {
     top: 0;
     right: 0;
 }
+
 .aside .nav-toggler {
     height: 40px;
     width: 45px;
@@ -175,6 +194,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .aside .nav-toggler span {
     height: 2px;
     width: 18px;
@@ -182,6 +202,7 @@ body {
     display: inline-block;
     position: relative;
 }
+
 .aside .nav-toggler span::before {
     content: '';
     height: 2px;
@@ -191,6 +212,7 @@ body {
     top: -6px;
     left: 0;
 }
+
 .aside .nav-toggler span::after {
     content: '';
     height: 2px;
@@ -200,13 +222,16 @@ body {
     top: 6px;
     left: 0;
 }
+
 .aside .nav {
     margin-top: 50px;
 }
+
 .aside .nav li {
     margin-bottom: 20px;
     display: block;
 }
+
 .aside .nav li a {
     font-size: 16px;
     font-weight: 600;
@@ -215,9 +240,11 @@ body {
     color: var(--text-black-900);
     padding: 5px 15px;
 }
+
 .aside .nav li a.active {
     color: var(--skin-color);
 }
+
 .aside .nav li a i {
     margin-right: 15px;
 }
@@ -232,39 +259,47 @@ ul {
     display: flex;
     color: var(--text-black-900);
 }
+
 .home .home-info {
     flex: 0 0 60%;
     max-width: 60%;
 }
+
 h3.hello {
     font-size: 28px;
     margin: 15px 0;
 }
+
 h3.hello span {
     font-family: 'Clicker Script', cursive;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-color);
 }
+
 h3.my-school {
     font-size: 30px;
     margin: 15px 0;
 }
+
 .typing {
     color: var(--skin-color);
 
 }
+
 .home-info p {
     margin-bottom: 70px;
     font-size: 20px;
     color: var(--text-black-700);
 }
+
 .home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
 }
+
 .home-img::before {
     content: '';
     position: absolute;
@@ -275,6 +310,7 @@ h3.my-school {
     left: -20px;
     top: -40px;
 }
+
 .home-img::after {
     content: '';
     position: absolute;
@@ -285,9 +321,11 @@ h3.my-school {
     right: 20px;
     bottom: -40px;
 }
+
 .home .home-img img {
     margin: auto;
-    border-radius: 5px;;
+    border-radius: 5px;
+    ;
     height: 400px;
 }
 
@@ -296,33 +334,40 @@ h3.my-school {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .about-text {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .about-text h3 {
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
     color: var(--text-black-900);
 }
+
 .about .about-content .about-text h3 span {
     color: var(--skin-color);
 }
+
 .about .about-content .about-text p {
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
 }
+
 .about .about-content .personal-info {
     flex: 0 0 60%;
     max-width: 60%;
     margin-top: 40px;
 }
+
 .about .about-content .personal-info .info-item {
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 .about .about-content .personal-info .info-item p {
     font-weight: 600;
     padding: 10px 0;
@@ -330,22 +375,26 @@ h3.my-school {
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
+
 .about .about-content .personal-info .info-item p span {
     font-weight: 400;
     color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
 }
+
 .about .about-content .skills {
     flex: 0 0 40%;
     max-width: 40%;
     margin-top: 40px;
 }
+
 .about .about-content .skills .skill-item {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 25px;
 }
+
 .about .about-content .skills .skill-item h5 {
     line-height: 40px;
     font-weight: 600;
@@ -353,6 +402,7 @@ h3.my-school {
     color: var(--text-black-900);
     text-transform: capitalize;
 }
+
 .about .about-content .skills .skill-item .progress {
     background-color: var(--text-black-700);
     height: 7px;
@@ -360,6 +410,7 @@ h3.my-school {
     width: 100%;
     position: relative;
 }
+
 .about .about-content .skills .skill-item .progress .progress-in {
     position: absolute;
     left: 0;
@@ -368,6 +419,7 @@ h3.my-school {
     border-radius: 4px;
     background-color: var(--skin-color);
 }
+
 .about .about-content .skills .skill-item .skill-percent {
     position: absolute;
     right: 0;
@@ -382,12 +434,32 @@ h3.my-school {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .portfolio .portfolio-heading h2 {
     color: var(--text-black-900);
     font-weight: 500;
 }
+
 .portfolio .portfolio-item {
-    margin-left: 2rem;
+    background: var(--bg-black-100);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 850px;
+}
+
+.portfolio .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+.portfolio .portfolio-item-inner {
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 /* Markdown */
@@ -397,4 +469,9 @@ h3.my-school {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
+}
+
+.portfolio-item-inner .markdown-body {
+    max-width: 100%;
+    margin: 0;
 }
