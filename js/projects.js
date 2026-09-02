@@ -6,6 +6,11 @@ const projects = [
         root: "https://raw.githubusercontent.com/DSparksUni/RustLife/refs/heads/master",
         url: "https://github.com/DSparksUni/RustLife",
     },
+    {
+        id: "project-cpp-unicorn",
+        root: "https://raw.githubusercontent.com/DSparksUni/Unicorn/refs/heads/main",
+        url: "https://github.com/DSparksUni/Unicorn",
+    },
 ];
 
 function update_projects() {
@@ -42,7 +47,7 @@ function update_projects() {
         }).catch(err => {
             const container = document.getElementById(project.id);
             container.innerHTML =
-                `<p style="color:red;">Failed to load README: ${err.message}</p>`;
+                `<p style="color:red;">Failed to load README for '${project.id}': ${err.message}</p>`;
         });
     });
 }
