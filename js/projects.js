@@ -5,6 +5,7 @@ const projects = [
         id: "project-rust_gol",
         root: "https://raw.githubusercontent.com/DSparksUni/RustLife/refs/heads/master",
         url: "https://github.com/DSparksUni/RustLife",
+        demo: "/game-of-life/",
     },
     {
         id: "project-cpp-unicorn",
@@ -44,6 +45,16 @@ function update_projects() {
             );
             const container = document.getElementById(project.id);
             container.innerHTML += markdown.render(image_patch);
+
+            if (project.demo) {
+                container.innerHTML += `
+                    <p>
+                        <a href="${project.demo}" class="project-demo">
+                            Live Demo
+                        </a>
+                    </p>
+                `;
+            }
         }).catch(err => {
             const container = document.getElementById(project.id);
             container.innerHTML =
@@ -51,4 +62,5 @@ function update_projects() {
         });
     });
 }
+
 update_projects();

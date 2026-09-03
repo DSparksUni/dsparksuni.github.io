@@ -1,0 +1,15 @@
+{
+  "name": "life-web",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "life_web_bg.wasm",
+    "life_web.js",
+    "life_web.d.ts"
+  ],
+  "main": "life_web.js",
+  "types": "life_web.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
