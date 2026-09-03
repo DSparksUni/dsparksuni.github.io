@@ -5,6 +5,7 @@ export class Life {
     free(): void;
     [Symbol.dispose](): void;
     cols(): number;
+    flip_cell(row: number, col: number): void;
     get_cell(row: number, col: number): boolean;
     iterate(): void;
     constructor(rows: number, cols: number);
@@ -18,6 +19,7 @@ export interface InitOutput {
     readonly memory: WebAssembly.Memory;
     readonly __wbg_life_free: (a: number, b: number) => void;
     readonly life_cols: (a: number) => number;
+    readonly life_flip_cell: (a: number, b: number, c: number) => void;
     readonly life_get_cell: (a: number, b: number, c: number) => number;
     readonly life_iterate: (a: number) => void;
     readonly life_new: (a: number, b: number) => number;

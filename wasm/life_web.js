@@ -21,6 +21,13 @@ export class Life {
     /**
      * @param {number} row
      * @param {number} col
+     */
+    flip_cell(row, col) {
+        wasm.life_flip_cell(this.__wbg_ptr, row, col);
+    }
+    /**
+     * @param {number} row
+     * @param {number} col
      * @returns {boolean}
      */
     get_cell(row, col) {
