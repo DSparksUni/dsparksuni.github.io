@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 2rem;
+
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    text-align: center;
+}
+
+canvas {
+    display: block;
+
+    margin: 2rem auto;
+
+    border: 1px solid black;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
