@@ -15,7 +15,7 @@ canvas.height = BOARD_ROWS * CELL_SIZE;
 
 const life = new Life(BOARD_ROWS, BOARD_COLS);
 
-let running = true;
+let running = false;
 let last_update = 0;
 let interval = 250;
 
@@ -69,9 +69,10 @@ canvas.addEventListener("click", event => {
 document.getElementById("pause").addEventListener("click", event => {
     running = !running;
 
-    event.target.getContext = running
-        ? "Pause"
-        : "Play";
+    const text = running ? "Pause" : "Play";
+
+    event.target.getContext = text;
+    document.getElementById("pause").innerText = text;
 });
 
 document.getElementById("step").addEventListener("click", () => {
