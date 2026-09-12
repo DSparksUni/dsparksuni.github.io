@@ -93,5 +93,9 @@ document.getElementById("clear").addEventListener("click", () => {
 });
 
 
+document.getElementById("back").addEventListener("click", () => {
+
+});
+
 draw();
 requestAnimationFrame(update);
