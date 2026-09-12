@@ -11,7 +11,7 @@ export const life_rows: (a: number) => number;
 export const life_set_cell: (a: number, b: number, c: number, d: number) => void;
 export const life_set_interval: (a: number, b: number) => void;
 export const life_step: (a: number) => void;
-export const life_tick: (a: number, b: number) => void;
+export const life_tick: (a: number, b: number) => number;
 export const life_toggle_running: (a: number) => number;
 export const __wbindgen_externrefs: WebAssembly.Table;
 export const __wbindgen_start: () => void;

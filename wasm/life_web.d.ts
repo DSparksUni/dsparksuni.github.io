@@ -13,7 +13,7 @@ export class Life {
     set_cell(row: number, col: number, value: boolean): void;
     set_interval(delta: number): void;
     step(): void;
-    tick(delta: number): void;
+    tick(delta: number): boolean;
     toggle_running(): boolean;
 }
 
@@ -31,7 +31,7 @@ export interface InitOutput {
     readonly life_set_cell: (a: number, b: number, c: number, d: number) => void;
     readonly life_set_interval: (a: number, b: number) => void;
     readonly life_step: (a: number) => void;
-    readonly life_tick: (a: number, b: number) => void;
+    readonly life_tick: (a: number, b: number) => number;
     readonly life_toggle_running: (a: number) => number;
     readonly __wbindgen_externrefs: WebAssembly.Table;
     readonly __wbindgen_start: () => void;

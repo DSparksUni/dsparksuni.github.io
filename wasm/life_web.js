@@ -74,9 +74,11 @@ export class Life {
     }
     /**
      * @param {number} delta
+     * @returns {boolean}
      */
     tick(delta) {
-        wasm.life_tick(this.__wbg_ptr, delta);
+        const ret = wasm.life_tick(this.__wbg_ptr, delta);
+        return ret !== 0;
     }
     /**
      * @returns {boolean}
