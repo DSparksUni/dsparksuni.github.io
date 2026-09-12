@@ -7,6 +7,7 @@ export class Life {
     cols(): number;
     flip_cell(row: number, col: number): void;
     get_cell(row: number, col: number): boolean;
+    is_running(): boolean;
     constructor(rows: number, cols: number, sim_interval: number);
     print(): void;
     rows(): number;
@@ -25,6 +26,7 @@ export interface InitOutput {
     readonly life_cols: (a: number) => number;
     readonly life_flip_cell: (a: number, b: number, c: number) => void;
     readonly life_get_cell: (a: number, b: number, c: number) => number;
+    readonly life_is_running: (a: number) => number;
     readonly life_new: (a: number, b: number, c: number) => number;
     readonly life_print: (a: number) => void;
     readonly life_rows: (a: number) => number;

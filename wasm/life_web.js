@@ -35,6 +35,13 @@ export class Life {
         return ret !== 0;
     }
     /**
+     * @returns {boolean}
+     */
+    is_running() {
+        const ret = wasm.life_is_running(this.__wbg_ptr);
+        return ret !== 0;
+    }
+    /**
      * @param {number} rows
      * @param {number} cols
      * @param {number} sim_interval
