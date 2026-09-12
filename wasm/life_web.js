@@ -34,15 +34,13 @@ export class Life {
         const ret = wasm.life_get_cell(this.__wbg_ptr, row, col);
         return ret !== 0;
     }
-    iterate() {
-        wasm.life_iterate(this.__wbg_ptr);
-    }
     /**
      * @param {number} rows
      * @param {number} cols
+     * @param {number} sim_interval
      */
-    constructor(rows, cols) {
-        const ret = wasm.life_new(rows, cols);
+    constructor(rows, cols, sim_interval) {
+        const ret = wasm.life_new(rows, cols, sim_interval);
         this.__wbg_ptr = ret;
         LifeFinalization.register(this, this.__wbg_ptr, this);
         return this;
@@ -64,6 +62,28 @@ export class Life {
      */
     set_cell(row, col, value) {
         wasm.life_set_cell(this.__wbg_ptr, row, col, value);
+    }
+    /**
+     * @param {number} delta
+     */
+    set_interval(delta) {
+        wasm.life_set_interval(this.__wbg_ptr, delta);
+    }
+    step() {
+        wasm.life_step(this.__wbg_ptr);
+    }
+    /**
+     * @param {number} delta
+     */
+    tick(delta) {
+        wasm.life_tick(this.__wbg_ptr, delta);
+    }
+    /**
+     * @returns {boolean}
+     */
+    toggle_running() {
+        const ret = wasm.life_toggle_running(this.__wbg_ptr);
+        return ret !== 0;
     }
 }
 if (Symbol.dispose) Life.prototype[Symbol.dispose] = Life.prototype.free;
