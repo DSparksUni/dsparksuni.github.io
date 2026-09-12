@@ -13,11 +13,10 @@ const ctx = canvas.getContext("2d");
 canvas.width = BOARD_COLS * CELL_SIZE;
 canvas.height = BOARD_ROWS * CELL_SIZE;
 
-const life = new Life(BOARD_ROWS, BOARD_COLS);
-
-let running = false;
 let last_update = 0;
-let interval = 250;
+let interval = 0.5;
+
+const life = new Life(BOARD_ROWS, BOARD_COLS, interval);
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -42,10 +41,8 @@ function draw() {
 }
 
 function update(timestamp) {
-    if (running && timestamp - last_update >= interval) {
-        life.iterate();
-        last_update = timestamp;
-    }
+    const delta = (timestamp - last_update) / 1000
+    if (life.tick(delta)) last_update = timestamp;
 
     draw();
 
@@ -53,7 +50,7 @@ function update(timestamp) {
 }
 
 canvas.addEventListener("click", event => {
-    if (running) return;
+    if (life.is_running()) return;
 
     const rect = canvas.getBoundingClientRect();
 
@@ -67,17 +64,15 @@ canvas.addEventListener("click", event => {
 });
 
 document.getElementById("pause").addEventListener("click", event => {
-    running = !running;
-
-    const text = running ? "Pause" : "Play";
+    const text = life.toggle_running() ? "Pause" : "Play";
 
     event.target.getContext = text;
     document.getElementById("pause").innerText = text;
 });
 
 document.getElementById("step").addEventListener("click", () => {
-    if (!running) {
-        life.iterate();
+    if (!life.is_running()) {
+        life.step();
         draw();
     }
 });
@@ -92,10 +87,6 @@ document.getElementById("clear").addEventListener("click", () => {
     draw();
 });
 
-
-document.getElementById("back").addEventListener("click", () => {
-
-});
 
 draw();
 requestAnimationFrame(update);
