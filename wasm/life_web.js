@@ -47,6 +47,9 @@ export class Life {
         LifeFinalization.register(this, this.__wbg_ptr, this);
         return this;
     }
+    print() {
+        wasm.life_print(this.__wbg_ptr);
+    }
     /**
      * @returns {number}
      */

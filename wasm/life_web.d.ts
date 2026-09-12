@@ -9,6 +9,7 @@ export class Life {
     get_cell(row: number, col: number): boolean;
     iterate(): void;
     constructor(rows: number, cols: number);
+    print(): void;
     rows(): number;
     set_cell(row: number, col: number, value: boolean): void;
 }
@@ -23,6 +24,7 @@ export interface InitOutput {
     readonly life_get_cell: (a: number, b: number, c: number) => number;
     readonly life_iterate: (a: number) => void;
     readonly life_new: (a: number, b: number) => number;
+    readonly life_print: (a: number) => void;
     readonly life_rows: (a: number) => number;
     readonly life_set_cell: (a: number, b: number, c: number, d: number) => void;
     readonly __wbindgen_externrefs: WebAssembly.Table;
